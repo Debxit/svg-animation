@@ -1,0 +1,11 @@
+.box2 {
+  display: block;
+  background-color: blue;
+  border-radius: 50%;
+  color: white;
+  height: 400px;
+  padding-top: 20%;
+}
+.spacer.s2{
+  height: 400px;
+}

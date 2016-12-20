@@ -1,145 +1,35 @@
-/*
+@font-face{
+  font-family: 'SF-bold';
+  src: url('../sf/SF-UI-Text-Heavy.ttf');
+  font-weight: bold;
+}
+html, body {
+    height: 100%;
+    margin: 0;
 
-	Author: Nemets Yury;
-	Site: www.sitehere.ru;
-
-*/
-
-@import url(http://fonts.googleapis.com/css?family=Roboto:300,400,900&subset=latin,cyrillic);
-
-body {
-  font:normal 100% 'Roboto', sans-serif;
-  margin: 0;
-  padding: 0;
-  background: url(../images/bg-rr.jpg) #57565B;
+}
+/* Make each section 100% of the browser viewport height */
+section {
+    height: 100%;
+    color: white;
+    position: relative;
+    text-align: center;
 }
 
-* {
-	box-sizing:border-box;
-}
+section#one { background-color: #EFF3F7; }
+section#two { background-color: #627181}
+section#three { background-color: green}
+section#four { background-color:  magenta }
 
-.content {
-  width: 1200px;
-  max-width: 100%;
-  margin: 0 auto;
-  padding: 100px 0;
-}
-
-.content:after {
-	content: "";
-	display: table;
-	clear: both;
-}
-
-.header,.lastBlock {
-	padding:80px 0;
-	background: url(../images/bg.png);
-	background-attachment: fixed;
-}
-
-.block1 {
-	background: #3AA2E3
-}
-
-.block1 p {
-	color: #fff;
-}
-
-.block2 {
-	background: #fff;
-}
-
-.block3 {
-	background: #F3F3F3;
-}
-
-.gear {
-	height: 100%;
-	width: 100%;
-}
-
-.blockLeftText {
-	width: 50%;
-	float:left;
-	padding-top: 20px;
-}
-
-.blockLeftText p {
-	font-size: 25px;
-}
-
-.blockWI {
-	width: 50%;
-	float:left;
-	text-align: center;
-	padding: 0 100px;
-}
-
-.lastBlock h3 {
-	font-weight: 300;
-	text-align: center;
-	color: #fff;
-	font-size: 30px;
-	margin:0;
-	line-height: 45px;
-}
-
-
-/*######Стили для демо###########*/
-h1.title {
-  color:#f8f8f8;
-  font-size: 70px;
-  line-height: 80px;
-  margin:20px auto 0;
-  width: 70%;
-  text-align: center;
-}
-
-h1.title span {
-  display: block;
-  font-size: 50px;
-  line-height: 60px;
-}
-
-p.info {
-  width: 30%;
-  background: #fff;
-  text-align: center;
-  line-height: 30px;
-  color: #57565B;
-  margin:30px auto 50px;
-}
-
-/*Адаптация*/
-@media screen and (max-width: 1140px) {
-  .bullet-item span{
-    line-height: 1.5em;
-    font-size: 10.5em;
-  }
-}
-
-/*Кнопка "К статье"*/
-.backToSitehereBtn{
-  display: block;
-  width: 150px;
-  height: 150px;
-  background: #01BC78;
-  text-align: center;
-  line-height: 170px;
-  font-size: 20px;
-  border-radius: 50%;
-  color:#fff;
+#one .wrap{
   position: absolute;
-  text-decoration: none;
-  top:-40px;
-  left:-40px;
-  transform:rotate(-45deg) scale(1);
-  transition:all 0.25s linear;
 }
+.price{
+  font-family: 'SF';
+  font-size: 50px;
+  color: #EC6D61;
 
-.backToSitehereBtn:hover {
-  text-decoration: none;
-  top:-10px;
-  left:-10px;
-  transform:rotate(-45deg) scale(1.3);
+}
+.work-types{
+color: #333333;
 }
