@@ -1,12 +1,26 @@
 @font-face{
   font-family: 'SF-bold';
-  src: url('../sf/SF-UI-Text-Heavy.ttf');
+  src: url('../fonts/SF-UI-Text-Heavy.ttf');
   font-weight: bold;
 }
+@font-face{
+  font-family: 'SF-medium';
+  src: url('../fonts/SF-UI-Text-Medium.ttf');
+}
+@font-face{
+  font-family: 'RUB';
+  src: url('../fonts/RUBSN.otf');
+  font-weight: bold;
+}
+
 html, body {
     height: 100%;
     margin: 0;
 
+}
+.container{
+  position: relative;
+  height: 100%;
 }
 /* Make each section 100% of the browser viewport height */
 section {
@@ -25,11 +39,53 @@ section#four { background-color:  magenta }
   position: absolute;
 }
 .price{
-  font-family: 'SF';
-  font-size: 50px;
+  font-family: 'SF-bold';
+  font-size: 225px;
   color: #EC6D61;
-
+  position: relative;
+  padding-right: 145px;
+    margin-bottom: 25px;
 }
+
+.price:before{
+  content: '';
+  display: block;
+  width: 200px;
+  bottom: 0;
+  left: 20px;
+  position: absolute;
+  border-bottom: solid #EC6D61 8px;
+}
+
+.price:after{
+  content: '';
+    display: block;
+    background: url(../img/arrow.png) no-repeat;
+    width: 150px;
+    bottom: 80px;
+    height: 110px;
+    right: -20px;
+    background-size: contain;
+    position: absolute;
+}
+
 .work-types{
 color: #333333;
+}
+
+.rub{
+    font-family: 'RUB';
+}
+
+.first-svg{
+  height: 90%;
+  position: absolute;
+  top: 18%;
+  right: 0;
+}
+
+.work-types{
+  font-family: 'SF-medium';
+  font-size: 46px;
+  text-align: left;
 }
