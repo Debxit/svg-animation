@@ -82,7 +82,7 @@ var controller = new ScrollMagic.Controller({
 
 /********************************************************/
 
- new ScrollMagic.Scene({triggerElement: "#trigger2", duration:800})
+ new ScrollMagic.Scene({triggerElement: "#trigger2", duration:700})
 						.setPin("#two", {pushFollowers:true})		
 						.addIndicators({
 						    colorStart: "rgba(255,255,255,0.5)",
@@ -97,7 +97,7 @@ var controller = new ScrollMagic.Controller({
 	var tween = new TimelineMax()
 		.add(TweenMax.to($second_line1, 0.5, {strokeDashoffset: 0, ease:Linear.easeNone})) 
 		.add(TweenMax.to($second_line2, 0.6, {strokeDashoffset: 0, ease:Linear.easeNone}))  
-		.add(TweenMax.to($second_line3, 0.7, {strokeDashoffset: 0, ease:Linear.easeNone}))  
+		.add(TweenMax.to($second_line3, 0.9, {strokeDashoffset: 0, ease:Linear.easeNone}))  
 		//.add(TweenMax.to("path", 1, {stroke: "#33629c", ease:Linear.easeNone}), 0);	// change color during the whole thing
 
 	// build scene

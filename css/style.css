@@ -37,6 +37,7 @@ section#four { background-color:  magenta }
 
 #one .wrap{
   position: absolute;
+      top: 13%;
 }
 .price{
   font-family: 'SF-bold';
@@ -77,10 +78,10 @@ color: #333333;
     font-family: 'RUB';
 }
 
-.first-svg{
-  height: 90%;
+#one .first-svg{
+  height: 74%;
   position: absolute;
-  top: 18%;
+  top: 30%;
   right: 0;
 }
 
@@ -88,4 +89,81 @@ color: #333333;
   font-family: 'SF-medium';
   font-size: 46px;
   text-align: left;
+}
+
+.one-hour,.any-spec{
+font-size: 80px;
+  font-family: 'SF-bold';
+  text-transform: uppercase;
+  line-height: 72px;
+}
+.one-hour{
+  max-width: 420px;
+  position: absolute;
+  top:9%;
+  left: 58%;
+}
+
+.any-spec{
+    position: absolute;
+    bottom: 41%;
+    left: 8%;
+}
+    
+#two .first-svg{
+    position: absolute;
+    left: 50%;
+    top: -5px;
+}
+
+#two .second-svg{
+    position: absolute;
+    top: 19%;
+    height: 30%;
+    width: 100%;
+     left: 10%;
+}
+
+#two .third-svg{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 37%;
+    width: 100%;
+}
+
+.spec1,.spec2,.spec3,.spec4{
+  font-size: 46px;
+  font-family: 'SF-medium';
+  color:#333;
+}
+.spec-wrap{
+  position: absolute;
+  bottom: 0;
+  width: 90%;
+  left: 10%;
+  display:flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+}
+.spec1{
+text-align: left;
+    margin-bottom: 30px;
+    padding-left: 5%;
+}
+.spec2{ 
+text-align: right;
+margin-bottom: -15px;
+padding-right: 10%;
+}
+.spec3{
+text-align: left;
+margin-bottom: 25px;
+ 
+}
+.spec4{
+text-align: right;
+      margin-bottom: 20px;
+          margin-right: -20px;    
 }
