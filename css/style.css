@@ -32,8 +32,6 @@ section {
 
 section#one { background-color: #EFF3F7; }
 section#two { background-color: #627181}
-section#three { background-color: green}
-section#four { background-color:  magenta }
 
 #one .wrap{
   position: absolute;
@@ -140,8 +138,7 @@ font-size: 80px;
 .spec-wrap{
   position: absolute;
   bottom: 0;
-  width: 90%;
-  left: 10%;
+  width: 100%;
   display:flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -166,4 +163,15 @@ margin-bottom: 25px;
 text-align: right;
       margin-bottom: 20px;
           margin-right: -20px;    
+}
+
+
+
+#three .first-svg{
+  display: block;
+}
+
+#three .fixed-part{
+  height: 350px;
+  background-color: green;
 }
