@@ -175,3 +175,10 @@ text-align: right;
   height: 350px;
   background-color: green;
 }
+
+#circle{
+  width:250px;
+    position: absolute;
+    top: 18%;
+    left: 39%;
+}
