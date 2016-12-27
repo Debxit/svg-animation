@@ -90,7 +90,7 @@ var controller = new ScrollMagic.Controller({
 		//.add(TweenMax.to("path", 1, {stroke: "#33629c", ease:Linear.easeNone}), 0);	// change color during the whole thing
 
 	// build scene
-	new ScrollMagic.Scene({triggerElement: "#trigger2", duration: 500, tweenChanges: true})
+	new ScrollMagic.Scene({triggerElement: "#trigger2", duration: 500, tweenChanges: false})
 					.setTween(tween)		
 					.addIndicators() 			
 					.addTo(controller);
@@ -112,16 +112,29 @@ var controller = new ScrollMagic.Controller({
 		.add(TweenMax.to('#three_circle_line2', 0.5, {strokeDashoffset: 0, ease:Linear.easeNone})) 
 
 	var tween7	= new TimelineMax()
+		.add(TweenMax.to('#three_circleIn_line9', 0.2, {strokeDashoffset: 0, ease:Linear.easeNone})) 
 		.add(TweenMax.to('#three_circleIn_line5', 0.2, {strokeDashoffset: 0, ease:Linear.easeNone})) 
 		.add(TweenMax.to('#three_circleIn_line1', 0.2, {strokeDashoffset: 0, ease:Linear.easeNone})) 
+		.add(TweenMax.to('#three_circleIn_line11', 0.2, {strokeDashoffset: 0, ease:Linear.easeNone})) 
 		.add(TweenMax.to('#three_circleIn_line7', 0.2, {strokeDashoffset: 0, ease:Linear.easeNone})) 
 		.add(TweenMax.to('#three_circleIn_line3', 0.2, {strokeDashoffset: 0, ease:Linear.easeNone})) 
+		.add(TweenMax.to('#three_circleIn_line10', 0.2, {strokeDashoffset: 0, ease:Linear.easeNone})) 
 		.add(TweenMax.to('#three_circleIn_line6', 0.2, {strokeDashoffset: 0, ease:Linear.easeNone})) 
 		.add(TweenMax.to('#three_circleIn_line2', 0.2, {strokeDashoffset: 0, ease:Linear.easeNone})) 
+		.add(TweenMax.to('#three_circleIn_line12', 0.2, {strokeDashoffset: 0, ease:Linear.easeNone})) 
 		.add(TweenMax.to('#three_circleIn_line8', 0.2, {strokeDashoffset: 0, ease:Linear.easeNone})) 
 		.add(TweenMax.to('#three_circleIn_line4', 0.2, {strokeDashoffset: 0, ease:Linear.easeNone})) 
 
 
+	var tween8 = new TimelineMax()
+		.add(TweenMax.to('#three_lines_line1', 0.5, {strokeDashoffset: 0, ease:Linear.easeNone})) 
+	var tween9	= new TimelineMax()
+		.add(TweenMax.to('#three_lines_line2', 0.5, {strokeDashoffset: 0, ease:Linear.easeNone})) 
+	var tween10 = new TimelineMax()
+		.add(TweenMax.to('#three_lines_line3', 0.5, {strokeDashoffset: 0, ease:Linear.easeNone})) 
+	var tween11	= new TimelineMax()
+		.add(TweenMax.to('#three_lines_line4', 0.5, {strokeDashoffset: 0, ease:Linear.easeNone})) 
+		
 
 	// build scene
 	new ScrollMagic.Scene({triggerElement: "#trigger3", duration: 500})
@@ -158,12 +171,12 @@ var controller = new ScrollMagic.Controller({
 					.setTween(tween6)							
 					.addIndicators() 			
 					.addTo(controller);
-	new ScrollMagic.Scene({triggerElement: "#trigger3",offset:65, duration: 320, tweenChanges: true})
+	new ScrollMagic.Scene({triggerElement: "#trigger3",offset:50, duration: 320, tweenChanges: true})
 					.setTween(tween7)							
 					.addIndicators() 			
 					.addTo(controller);
-	/* new ScrollMagic.Scene({triggerElement: "#trigger4", duration:700})
-		.setPin("#three .fixed-part", {pushFollowers:true})		
+	 new ScrollMagic.Scene({triggerElement: "#trigger4", duration:800})
+		.setPin("#three .fixed-part", {pushFollowers:false})		
 		.addIndicators({
 		    colorStart: "rgba(255,255,255,0.5)",
 		    colorEnd: "rgba(255,255,255,0.5)", 
@@ -171,6 +184,26 @@ var controller = new ScrollMagic.Controller({
 		    name:name
 		}) 			
 		.addTo(controller);
-*/
+		
+			new ScrollMagic.Scene({triggerElement: "#three .fixed-part",offset:15, duration: 400, tweenChanges: true})
+					.setTween(tween8)							
+					.addIndicators() 			
+					.addTo(controller);
+
+	new ScrollMagic.Scene({triggerElement: "#three .fixed-part", duration: 400, tweenChanges: true})
+					.setTween(tween9)							
+					.addIndicators() 			
+					.addTo(controller);
+	new ScrollMagic.Scene({triggerElement: "#three .fixed-part",offset:55, duration: 400, tweenChanges: true})
+					.setTween(tween10)							
+					.addIndicators() 			
+					.addTo(controller);
+
+	new ScrollMagic.Scene({triggerElement: "#three .fixed-part",offset:30, duration: 400, tweenChanges: true})
+					.setTween(tween11)							
+					.addIndicators() 			
+					.addTo(controller);
+					
+
 
 });

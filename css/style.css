@@ -110,24 +110,25 @@ font-size: 80px;
     
 #two .first-svg{
     position: absolute;
-    left: 50%;
-    top: -5px;
+    left: 49%;
+    top: -4px;
+	height: 15%;
 }
 
 #two .second-svg{
     position: absolute;
-    top: 19%;
+     top: 19%;
     height: 30%;
-    width: 100%;
-     left: 10%;
+    /* width: 100%; */
+    right: 0;
 }
 
 #two .third-svg{
     position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 37%;
-    width: 100%;
+       bottom: 0px;
+    left: 35%;
+    height: 38%;
+    /* width: 100%; */
 }
 
 .spec1,.spec2,.spec3,.spec4{
@@ -172,13 +173,37 @@ text-align: right;
 }
 
 #three .fixed-part{
-  height: 350px;
-  background-color: green;
+  height: 250px;
+  	position:relative;
+	background-color: #fff;
 }
 
 #circle{
   width:250px;
     position: absolute;
-    top: 18%;
+      top: 13%;
+
     left: 39%;
+}
+
+
+.program{
+	position: absolute;
+    left: -25px;
+    top: 0;
+}
+.html{
+	    position: absolute;
+    left: 26%;
+    top: 35%;
+}
+.content{
+	    position: absolute;
+    left: 58%;
+    top: 10%;
+}
+.design{
+	    position: absolute;
+    right: -20px;
+    top: 45%;
 }
