@@ -175,7 +175,7 @@ var controller = new ScrollMagic.Controller({
 					.setTween(tween7)							
 					.addIndicators() 			
 					.addTo(controller);
-	 new ScrollMagic.Scene({triggerElement: "#trigger4", duration:800})
+	 new ScrollMagic.Scene({triggerElement: "#trigger4", duration:700})
 		.setPin("#three .fixed-part", {pushFollowers:false})		
 		.addIndicators({
 		    colorStart: "rgba(255,255,255,0.5)",
@@ -191,7 +191,15 @@ var controller = new ScrollMagic.Controller({
 					.addTo(controller);
 
 	new ScrollMagic.Scene({triggerElement: "#three .fixed-part", duration: 700, tweenChanges: true})
-					.setTween(tween9)							
+					.setTween(tween9)	
+					.on("enter", function () {
+						// reset style
+						$(".work-block.1").addClass( "green");// add class toggle
+					})
+					.on("leave", function () {						// reset style
+						$(".work-block.1").removeClass( "green");
+						$(".work-block.1").removeClass( "green");
+					})					
 					.addIndicators() 			
 					.addTo(controller);
 	new ScrollMagic.Scene({triggerElement: "#three .fixed-part",offset:15, duration: 700, tweenChanges: true})
@@ -204,7 +212,7 @@ var controller = new ScrollMagic.Controller({
 					.addIndicators() 			
 					.addTo(controller);
 					
-	new ScrollMagic.Scene({triggerElement: "#green1",offset:-65})
+	new ScrollMagic.Scene({triggerElement: "#three .fixed-part",offset:90})
 					.on("enter", function () {
 						// reset style
 						$(".work-block.2").addClass( "green");// add class toggle
@@ -216,7 +224,7 @@ var controller = new ScrollMagic.Controller({
 					.addIndicators() // add indicators (requires plugin)
 					.addTo(controller);
 
-	new ScrollMagic.Scene({triggerElement: "#green1",offset:10})
+	new ScrollMagic.Scene({triggerElement: "#three .fixed-part",offset:200})
 					.on("enter", function () {
 						// reset style
 						$(".work-block.3").addClass( "green");// add class toggle
@@ -228,7 +236,7 @@ var controller = new ScrollMagic.Controller({
 					.addIndicators() // add indicators (requires plugin)
 					.addTo(controller);
 
-	new ScrollMagic.Scene({triggerElement: "#green1",offset:200})
+	new ScrollMagic.Scene({triggerElement: "#three .fixed-part",offset:280})
 					.on("enter", function () {
 						// reset style
 						$(".work-block.4").addClass( "green");// add class toggle
