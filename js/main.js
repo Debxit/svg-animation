@@ -127,13 +127,13 @@ var controller = new ScrollMagic.Controller({
 
 
 	var tween8 = new TimelineMax()
-		.add(TweenMax.to('#three_lines_line1', 0.5, {strokeDashoffset: 0, ease:Linear.easeNone})) 
+		.add(TweenMax.to('#three_lines_line1', 1, {strokeDashoffset: 0, ease:Linear.easeNone})) 
 	var tween9	= new TimelineMax()
-		.add(TweenMax.to('#three_lines_line2', 0.5, {strokeDashoffset: 0, ease:Linear.easeNone})) 
+		.add(TweenMax.to('#three_lines_line2', 1, {strokeDashoffset: 0, ease:Linear.easeNone})) 
 	var tween10 = new TimelineMax()
-		.add(TweenMax.to('#three_lines_line3', 0.5, {strokeDashoffset: 0, ease:Linear.easeNone})) 
+		.add(TweenMax.to('#three_lines_line3', 1, {strokeDashoffset: 0, ease:Linear.easeNone})) 
 	var tween11	= new TimelineMax()
-		.add(TweenMax.to('#three_lines_line4', 0.5, {strokeDashoffset: 0, ease:Linear.easeNone})) 
+		.add(TweenMax.to('#three_lines_line4', 1, {strokeDashoffset: 0, ease:Linear.easeNone})) 
 		
 
 	// build scene
@@ -185,25 +185,59 @@ var controller = new ScrollMagic.Controller({
 		}) 			
 		.addTo(controller);
 		
-			new ScrollMagic.Scene({triggerElement: "#three .fixed-part",offset:15, duration: 400, tweenChanges: true})
+			new ScrollMagic.Scene({triggerElement: "#three .fixed-part",offset:5, duration:700, tweenChanges: true})
 					.setTween(tween8)							
 					.addIndicators() 			
 					.addTo(controller);
 
-	new ScrollMagic.Scene({triggerElement: "#three .fixed-part", duration: 400, tweenChanges: true})
+	new ScrollMagic.Scene({triggerElement: "#three .fixed-part", duration: 700, tweenChanges: true})
 					.setTween(tween9)							
 					.addIndicators() 			
 					.addTo(controller);
-	new ScrollMagic.Scene({triggerElement: "#three .fixed-part",offset:55, duration: 400, tweenChanges: true})
+	new ScrollMagic.Scene({triggerElement: "#three .fixed-part",offset:15, duration: 700, tweenChanges: true})
 					.setTween(tween10)							
 					.addIndicators() 			
 					.addTo(controller);
 
-	new ScrollMagic.Scene({triggerElement: "#three .fixed-part",offset:30, duration: 400, tweenChanges: true})
+	new ScrollMagic.Scene({triggerElement: "#three .fixed-part",offset:10, duration:700, tweenChanges: true})
 					.setTween(tween11)							
 					.addIndicators() 			
 					.addTo(controller);
 					
+	new ScrollMagic.Scene({triggerElement: "#green1",offset:-65})
+					.on("enter", function () {
+						// reset style
+						$(".work-block.2").addClass( "green");// add class toggle
+					})
+					.on("leave", function () {
+						// reset style
+						$(".work-block.2").removeClass( "green");
+					})
+					.addIndicators() // add indicators (requires plugin)
+					.addTo(controller);
 
+	new ScrollMagic.Scene({triggerElement: "#green1",offset:10})
+					.on("enter", function () {
+						// reset style
+						$(".work-block.3").addClass( "green");// add class toggle
+					})
+					.on("leave", function () {
+						// reset style
+						$(".work-block.3").removeClass( "green");
+					})
+					.addIndicators() // add indicators (requires plugin)
+					.addTo(controller);
 
+	new ScrollMagic.Scene({triggerElement: "#green1",offset:200})
+					.on("enter", function () {
+						// reset style
+						$(".work-block.4").addClass( "green");// add class toggle
+					})
+					.on("leave", function () {
+						// reset style
+						$(".work-block.4").removeClass( "green");
+					})
+					.addIndicators() // add indicators (requires plugin)
+					.addTo(controller);
+					
 });

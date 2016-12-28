@@ -12,7 +12,11 @@
   src: url('../fonts/RUBSN.otf');
   font-weight: bold;
 }
-
+@font-face{
+  font-family: 'FontAwesome';
+  src: url('../fonts/FontAwesome.otf');
+  font-weight: bold;
+}
 html, body {
     height: 100%;
     margin: 0;
@@ -89,13 +93,13 @@ color: #333333;
   text-align: left;
 }
 
-.one-hour,.any-spec{
+#two .one-hour,.any-spec{
 font-size: 80px;
   font-family: 'SF-bold';
   text-transform: uppercase;
   line-height: 72px;
 }
-.one-hour{
+#two .one-hour{
   max-width: 420px;
   position: absolute;
   top:9%;
@@ -169,13 +173,26 @@ text-align: right;
 
 
 #three .first-svg{
-  display: block;
+      width: 85%;
+    margin: 0 auto;
+    display: block;
 }
 
-#three .fixed-part{
-  height: 250px;
-  	position:relative;
-	background-color: #fff;
+
+#three .wrap{
+  position: relative;
+}
+
+#three .one-hour{
+    font-family: 'SF-bold';
+    font-size: 30px;
+    text-transform: uppercase;
+    position: absolute;
+    color: #000;
+    left: 45.7%;
+    top: 32%;
+    width: 95px;
+    line-height: 28px;
 }
 
 #circle{
@@ -186,24 +203,143 @@ text-align: right;
     left: 39%;
 }
 
-
-.program{
-	position: absolute;
-    left: -25px;
-    top: 0;
+#three .fixed-part{
+  height: 200px;
+  position:relative;
+  z-index: 2;
+  
 }
-.html{
+#three .third-svg{
+  width: 80%;
+  position: absolute;
+  left:10%;
+}
+.fixed-part .program,.fixed-part .html,.fixed-part .content,.fixed-part .design, .spec-1c,  .system{
+  height: 170px;
+  background-color: #fff;
+ text-align: center;
+
+}
+.title{
+   color: #000;
+ font-weight: bold;
+ font-size: 22px;
+ margin-top: 10px;
+ text-transform: uppercase;
+}
+
+.fixed-part .program img,.fixed-part  .html img,.fixed-part .content img,.fixed-part .design img, .spec-1c img, .system img{
+  height: 60%;
+  margin-top: 15px;
+}
+
+.fixed-part .program{
+	position: absolute;
+    left: 0;
+    top: 5%;
+}
+.fixed-part .html{
 	    position: absolute;
-    left: 26%;
+     left: 28%;
     top: 35%;
 }
-.content{
-	    position: absolute;
-    left: 58%;
+.fixed-part .content{
+	  position: absolute;
+    left: 55%;
     top: 10%;
 }
-.design{
+.fixed-part .design{
 	    position: absolute;
-    right: -20px;
+    right: 0;
     top: 45%;
+}
+.third-wrap{
+  width: 100%;
+  font-size: 0;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 108px;
+}
+.work-block{
+  margin-top: 80px;
+  color:#000;
+ display: block;
+ padding: 10px;
+ font-size: 16px;
+font-family: 'SF-medium';
+ position: relative;
+ background-color: #fff;
+}
+
+.third-wrap .program,.third-wrap .html,.third-wrap .content,.third-wrap .design{
+  display: inline-block;
+  position: relative;
+  width: 20%;
+ }
+
+.check{
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border:3px solid #D5D8DB;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  transition: border 1.5s;
+
+}
+.green .check{
+  border: 3px solid #5CD670;
+}
+
+.check:after{
+  content: '\f00c';
+  font-family: FontAwesome;
+  position: absolute;
+  color: #D5D8DB;
+  font-size: 40px;
+  left: 20%;
+  top: 7%;
+  transition: color 1.5s ;
+
+}
+
+.green .check:after{
+  color:#5CD670;
+}
+
+.more-spec{
+  margin-bottom: 50px;
+  border-top: 15px solid #627181;
+  border-bottom:  15px solid #627181;
+  background-color: #fff;
+  display: flex;
+  padding:30px 0;
+  z-index: 2;
+  justify-content: space-between;
+}
+.more-spec .text{
+  width: 57%;
+  display: inline-block;
+  text-align: left;
+}
+.more-spec .spec{
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+
+}
+.more-spec .head{
+   font-size: 40px;
+   font-family: 'SF-bold';
+   color:#627181;
+}
+
+.more-spec .descr{
+   font-size: 20px;
+   font-family: 'SF-medium';
+   color: #000;
+}
+.spec-1c, .system{
+  display: inline-block;
 }
