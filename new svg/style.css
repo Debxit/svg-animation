@@ -33,7 +33,7 @@ section {
 section svg {
     display: block;
     width: 100vw;
-    height: 62.5vw;
+    height: 100vh;
 }
 .svg-con{
       position: absolute;

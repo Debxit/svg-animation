@@ -44,7 +44,7 @@ section#two {
 }
 .price{
   font-family: 'SF-bold';
-  font-size: 225px;
+  font-size: 215px;
   color: #EC6D61;
   position: relative;
   padding-right: 145px;
@@ -82,10 +82,10 @@ color: #333333;
 }
 
 #one .first-svg{
-  height: 74%;
-  position: absolute;
-  top: 30%;
-  right: 1%;
+    height: 710px;
+    position: absolute;
+    top: 28%;
+    right: 2.5%;
 }
 
 .work-types{
@@ -104,7 +104,7 @@ font-size: 80px;
   max-width: 420px;
   position: absolute;
   top:9%;
-  left: 58%;
+    left: 60%;
 }
 
 .any-spec{
