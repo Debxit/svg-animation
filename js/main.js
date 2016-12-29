@@ -38,7 +38,6 @@ var controller = new ScrollMagic.Controller({
 		$.each(el , function( i, val ) {
 			console.log($(val));
 			lineLength = val.pathLength;
-			//console.log(lineLength);
 		 	 lineLength = $(val)[0].getTotalLength();
 			 $(val).css("stroke-dasharray", lineLength);
 			 $(val).css("stroke-dashoffset", lineLength);
@@ -49,9 +48,6 @@ var controller = new ScrollMagic.Controller({
 	}
 
 	var lines = $('path[id]');
-	var second_line1 = $("path#second_line1");
-	console.log(second_line1);
-
 
 	// prepare SVG
 
@@ -236,7 +232,7 @@ var controller = new ScrollMagic.Controller({
 					.addIndicators() // add indicators (requires plugin)
 					.addTo(controller);
 
-	new ScrollMagic.Scene({triggerElement: "#three .fixed-part",offset:280})
+	new ScrollMagic.Scene({triggerElement: "#three .fixed-part",offset:310})
 					.on("enter", function () {
 						// reset style
 						$(".work-block.4").addClass( "green");// add class toggle
@@ -247,5 +243,18 @@ var controller = new ScrollMagic.Controller({
 					})
 					.addIndicators() // add indicators (requires plugin)
 					.addTo(controller);
+	new ScrollMagic.Scene({triggerElement: ".more-spec", duration:300})
+						.setPin(".more-spec", {pushFollowers:true})	
+						.addIndicators() 			
+						.addTo(controller);
+
+	var tween10 = new TimelineMax()
+		.add(TweenMax.to(".more-spec .intro.first",0.1, { transform: "translateY(-240px)"})) 
+		.add(TweenMax.to(".more-spec .intro.second",0.1, { transform: "translateY(-180px"}))	
+
+	new ScrollMagic.Scene({triggerElement: ".more-spec",offset:50, duration:10})
+						.setTween(tween10)
+						.addIndicators() 			
+						.addTo(controller);
 					
 });
