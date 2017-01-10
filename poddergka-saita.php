@@ -1,22 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<?
+require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
+$APPLICATION->SetPageProperty("keywords", "поддержка сайта, поддержка сайта спб");
+$APPLICATION->SetPageProperty("description", "Поддержка сайта в компании Webcenter.PRO");
+$APPLICATION->SetTitle("Поддержка сайта");
 
 
-	<link rel="stylesheet" href="css/style_support.css">
-	<link rel="stylesheet" href="css/jquery.fancybox.css" type="text/css" media="screen" />
-</head>
-<body>
+$APPLICATION->SetAdditionalCss(SITE_TEMPLATE_PATH."/css/style_support.css");
+$APPLICATION->SetAdditionalCss(SITE_TEMPLATE_PATH."/css/jquery.fancybox.css");
 
-  
+?>
 
-	<div id="trigger1"></div>
+    <!-- Include ScrollMagic and GSAP plugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.0/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/ScrollMagic.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/plugins/animation.gsap.min.js"></script>
+
+	<script type="text/javascript" src="<?=SITE_TEMPLATE_PATH?>/js/jquery.mousewheel-3.0.6.pack.js"></script>
+
+	<!-- Add fancyBox -->
+
+	<script type="text/javascript" src="<?=SITE_TEMPLATE_PATH?>/js/jquery.fancybox.pack.js"></script>
+	<script type="text/javascript" src="<?=SITE_TEMPLATE_PATH?>/js/main_support.js"></script>
+	
+	
+<div id="trigger1"></div>
 
 	<section id="one">
 		<div class="container">
@@ -46,7 +54,6 @@
 			</svg>
 
 
-
 		</div>
 	</section>
 
@@ -55,17 +62,16 @@
 	<section id="two">
 
 		<div class="container">
-			<svg class="first-svg" version="1.1" preserveAspectRatio="xMinYMax meet"  viewBox="0 0 100 140"  >
+		<svg class="first-svg" version="1.1" preserveAspectRatio="xMinYMax meet"  viewBox="0 0 100 140"  >
 			<polyline stroke-width="20" fill="none" stroke="#748593" points="5,4.1 5,127 95,127 "/>
 			<path id="second_line1"  stroke="#45505B"  stroke-width="20" fill="none" d="M5,4.1 5,127 95,127 "/>
 		</svg>
-
 
 		<div class="one-hour">
 			За 1 час Работы
 		</div>
 
-			<svg class="second-svg" version="1.1" preserveAspectRatio="xMinYMax meet"  viewBox="0 0 1040 280"   >
+		<svg class="second-svg" version="1.1" preserveAspectRatio="xMinYMax meet"  viewBox="0 0 1040 280"   >
 			<polyline  stroke-width="20" fill="none" stroke="#748593"  points="978,7.4 1024,7.4 1024,185.4 6,185.4 6,315.6 "/>
 			<path id="second_line2"  stroke-width="20" fill="none"  stroke="#45505B"  d="M978,7.4 1024,7.4 1024,185.4 6,185.4 6,315.6 "/>
 		</svg>
@@ -166,25 +172,25 @@
 				
 			<div class="fixed-part">
 				<div class="program" > 
-					<img src="img/program.png"/>
+					<img src="<?=SITE_TEMPLATE_PATH?>/img/program.png"/>
 					<div class="title">
 						программист
 					</div>
 				</div>
 				<div  class="html">
-					 <img src="img/html.png"/>
+					 <img src="<?=SITE_TEMPLATE_PATH?>/img/html.png"/>
 					 <div class="title">
 						верстальщик
 					</div>
 				</div>
 				<div class="content"> 
-					<img  src="img/content.png"/>
+					<img  src="<?=SITE_TEMPLATE_PATH?>/img/content.png"/>
 					<div class="title">
 						контент-менеджер
 					</div>
 				</div>
 				<div  class="design">
-					 <img src="img/design.png"/>
+					 <img src="<?=SITE_TEMPLATE_PATH?>/img/design.png"/>
 					 <div class="title">
 						дизайнер
 					</div>
@@ -210,7 +216,7 @@
 			
 				<div class="program">
 					<div class="header">
-						<img src="img/program.png"/>
+						<img src="<?=SITE_TEMPLATE_PATH?>/img/program.png"/>
 						<div class="title">
 							программист
 						</div>
@@ -239,7 +245,7 @@
 				</div>
 				<div class="html">
 					<div class="header">
-						 <img src="img/html.png"/>
+						 <img src="<?=SITE_TEMPLATE_PATH?>/img/html.png"/>
 						 <div class="title">
 							верстальщик
 						</div>
@@ -265,7 +271,7 @@
 				</div>
 				<div class="content">
 					<div class="header">
-						<img  src="img/content.png"/>
+						<img  src="<?=SITE_TEMPLATE_PATH?>/img/content.png"/>
 						<div class="title">
 							контент-менеджер
 						</div>
@@ -294,7 +300,7 @@
 				</div>
 				<div class="design">
 					<div class="header">
-						 <img src="img/design.png"/>
+						 <img src="<?=SITE_TEMPLATE_PATH?>/img/design.png"/>
 						 <div class="title">
 							дизайнер
 						</div>
@@ -332,13 +338,13 @@
 					<div class="spec">
 						
 						<div class="spec-1c">
-							<img src="img/1c.png" alt=""/>
+							<img src="<?=SITE_TEMPLATE_PATH?>/img/1c.png" alt=""/>
 							<div class="title">
 							программист 1С
 							</div>
 						</div>
 						<div class="system">
-							<img src="img/admin.png" alt="">
+							<img src="<?=SITE_TEMPLATE_PATH?>/img/admin.png" alt="">
 							<div class="title">
 								системный <br> администратор
 							</div>
@@ -385,7 +391,7 @@
 
 		<div class="container">
 		<div class="notebook" >
-			<img  src="img/screen.png" alt="">
+			<img  src="<?=SITE_TEMPLATE_PATH?>/img/screen.png" alt="">
 			<svg  class="first-svg" version="1.1"  preserveAspectRatio="xMinYMax meet"  viewBox="0 0 650 400">
 		
 				<!--<path fill="none" stroke="#FFFFFF" stroke-width="3"  stroke-miterlimit="10" d="M568,341.5H68c-5.5,0-10-4.5-10-10V20.6
@@ -450,6 +456,8 @@
 		</div>
 		</div>
 	</section>
+
+	
 	<section id="five">
 		<div class="container">
 			<div class="our-skills">		
@@ -458,59 +466,75 @@
 			<div class="wrap">
 				<div class="sertificate">
 
-					<a class="fancybox" rel="group" href="img/sertificate1.jpg" title="">
-						<img src="img/sertificate1.jpg" alt="">
+					<a class="fancybox" rel="group" href="<?=SITE_TEMPLATE_PATH?>/img/sertificate1.jpg" title="">
+						<img src="<?=SITE_TEMPLATE_PATH?>/img/sertificate1.jpg" alt="">
 					</a> 
 				</div>
 				
 				<div class="sertificate">
-						<a class="fancybox" rel="group" href="img/integration1C.jpg" title="">
-						<img src="img/integration1C.jpg" alt="">
+						<a class="fancybox" rel="group" href="<?=SITE_TEMPLATE_PATH?>/img/integration1C.jpg" title="">
+						<img src="<?=SITE_TEMPLATE_PATH?>/img/integration1C.jpg" alt="">
 					</a>
 				</div>
 				<div class="sertificate">
-					<a class="fancybox" rel="group" href="img/partner_competence1.jpg" title="">
-						<img src="img/partner_competence1.jpg" alt="">
+					<a class="fancybox" rel="group" href="<?=SITE_TEMPLATE_PATH?>/img/partner_competence1.jpg" title="">
+						<img src="<?=SITE_TEMPLATE_PATH?>/img/partner_competence1.jpg" alt="">
 					</a>
 				</div>	
 				<div class="sertificate">
-					<a class="fancybox" rel="group" href="img/akkr.jpg" title="">
-						<img src="img/akkr.jpg" alt="">
+					<a class="fancybox" rel="group" href="<?=SITE_TEMPLATE_PATH?>/img/akkr.jpg" title="">
+						<img src="<?=SITE_TEMPLATE_PATH?>/img/akkr.jpg" alt="">
 					</a>
 				</div>
 				<div class="sertificate">
-					<a class="fancybox" rel="group" href="img/authorization.jpg" title="">
-						<img src="img/authorization.jpg" alt="">
+					<a class="fancybox" rel="group" href="<?=SITE_TEMPLATE_PATH?>/img/authorization.jpg" title="">
+						<img src="<?=SITE_TEMPLATE_PATH?>/img/authorization.jpg" alt="">
 					</a>
+				
 				</div>
 			</div>
 		</div>
+		<div class="container podderga-dvigki">
+	<div class="one-block dev-block sup-block">
+		<div class="row">
+			<div class="col-xs-12 col-sm-3">
+				<h3>Технологии</h3>
+				<p>
+					 Мы работаем с любыми платформами и движками, как для поддержки сайта, так и для администрирования.
+				</p>
+			</div>
+			<div class="col-xs-12 col-sm-3">
+				<a href="/razrabotka-i-podderzhka-sajtov-na-wordpress/"><div class="logotypes">
+				</div></a>
+				<a href="/razrabotka-i-podderzhka-sajtov-na-joomla/"><div class="logotypes joomla">
+				</div></a>
+			</div>
+			<div class="col-xs-12 col-sm-3">
+				<a href="/support-bitrix">
+					<div class="logotypes bitrix">
+					</div>
+				</a>
+				<a href="/razrabotka-i-podderzhka-sajtov-na-modx/"><div class="logotypes modx">
+				</div></a>
+			</div>
+			<div class="col-xs-12 col-sm-3">
+				<a href="/razrabotka-i-podderzhka-sajtov-na-webasyst/"><div class="logotypes webasyst">
+				</div></a>
+				<a href="/razrabotka-i-podderzhka-sajtov-na-cscart/"><div class="logotypes cs-cart">
+				</div></a>
+			</div>
+		</div>
+	</div>
+</div>
+
 	</section>
 
+<div class="button-bottom-poddergka">
+	<div class="container">
+ <a href="#" class="callback-button">Заказать поддержку сайта</a>
+	</div>
+</div>
 
 
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-	
-    <!-- Include ScrollMagic and GSAP plugin -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.0/TweenMax.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/ScrollMagic.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.js"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/plugins/animation.gsap.min.js"></script>
-
-    <script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
-
-
-	<script type="text/javascript" src="js/jquery.mousewheel-3.0.6.pack.js"></script>
-
-
-	<!-- Add fancyBox -->
-
-
-	<script type="text/javascript" src="js/jquery.fancybox.pack.js"></script>
-
-	<script type="text/javascript" src="js/main_support.js"></script>
-    
-</body>
-</html>
+<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

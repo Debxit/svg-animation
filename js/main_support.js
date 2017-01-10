@@ -34,7 +34,7 @@ var controller = new ScrollMagic.Controller({
 	pathPrepare(lines);
 
 
- new ScrollMagic.Scene({triggerElement: "#trigger1", duration: 400})
+ new ScrollMagic.Scene({triggerElement: "#trigger1", duration: 200})
 						.setPin("#one", {pushFollowers:true})		
 					//	.addIndicators() 			
 						.addTo(controller);
@@ -53,10 +53,10 @@ var controller = new ScrollMagic.Controller({
 
 /********************************************************/
 
- new ScrollMagic.Scene({triggerElement: "#trigger2", duration:700})
-						.setPin("#two", {pushFollowers:true})		
-				//		.addIndicators() 			
-						.addTo(controller);
+ // new ScrollMagic.Scene({triggerElement: "#trigger2", duration:700})
+	// 					.setPin("#two", {pushFollowers:true})		
+	// 			//		.addIndicators() 			
+	// 					.addTo(controller);
 
 	// build tween
 	var tween = new TimelineMax()
@@ -66,7 +66,7 @@ var controller = new ScrollMagic.Controller({
 		//.add(TweenMax.to("path", 1, {stroke: "#33629c", ease:Linear.easeNone}), 0);	// change color during the whole thing
 
 	// build scene
-	new ScrollMagic.Scene({triggerElement: "#trigger2", duration: 500, tweenChanges: false})
+	new ScrollMagic.Scene({triggerElement: "#trigger1",offset:400, duration: 500, tweenChanges: false})
 					.setTween(tween)		
 				//	.addIndicators() 			
 					.addTo(controller);
@@ -113,47 +113,47 @@ var controller = new ScrollMagic.Controller({
 		
 
 	// build scene
-	new ScrollMagic.Scene({triggerElement: "#trigger3", duration: 500})
-					.setPin("#three .wrap", {pushFollowers:true})	
-					.addTo(controller);
+	// new ScrollMagic.Scene({triggerElement: "#trigger3", duration: 500})
+	// 				.setPin("#three .wrap", {pushFollowers:true})	
+	// 				.addTo(controller);
 					
-	new ScrollMagic.Scene({triggerElement: "#trigger3", duration: 400, tweenChanges: true})
+	new ScrollMagic.Scene({triggerElement: ".any-spec", duration: 400, tweenChanges: true})
 					.setTween(tween1)							
 			//		.addIndicators() 			
 					.addTo(controller);
 
-	new ScrollMagic.Scene({triggerElement: "#trigger3", duration: 400, tweenChanges: true})
+	new ScrollMagic.Scene({triggerElement: ".any-spec", duration: 400, tweenChanges: true})
 					.setTween(tween2)							
 			//		.addIndicators() 			
 					.addTo(controller);
-	new ScrollMagic.Scene({triggerElement: "#trigger3", duration: 400, tweenChanges: true})
+	new ScrollMagic.Scene({triggerElement: ".any-spec", duration: 400, tweenChanges: true})
 					.setTween(tween3)							
 			//		.addIndicators() 			
 					.addTo(controller);
 
-	new ScrollMagic.Scene({triggerElement: "#trigger3", duration: 400, tweenChanges: true})
+	new ScrollMagic.Scene({triggerElement: ".any-spec", duration: 400, tweenChanges: true})
 					.setTween(tween4)							
 			//		.addIndicators() 			
 					.addTo(controller);
 
 
 
-	new ScrollMagic.Scene({triggerElement: "#trigger3",offset:50, duration: 300, tweenChanges: true})
+	new ScrollMagic.Scene({triggerElement: ".any-spec",offset:50, duration: 300, tweenChanges: true})
 					.setTween(tween5)							
 			//		.addIndicators() 			
 					.addTo(controller);
 
-	new ScrollMagic.Scene({triggerElement: "#trigger3",offset:55, duration: 300, tweenChanges: true})
+	new ScrollMagic.Scene({triggerElement: ".any-spec",offset:55, duration: 300, tweenChanges: true})
 					.setTween(tween6)							
 			//		.addIndicators() 			
 					.addTo(controller);
-	new ScrollMagic.Scene({triggerElement: "#trigger3",offset:50, duration: 320, tweenChanges: true})
+	new ScrollMagic.Scene({triggerElement: ".any-spec",offset:50, duration: 320, tweenChanges: true})
 					.setTween(tween7)							
 			//		.addIndicators() 			
 					.addTo(controller);
-	 new ScrollMagic.Scene({triggerElement: "#trigger4", duration:700})
-		.setPin("#three .fixed-part", {pushFollowers:false})				
-		.addTo(controller);
+	 // new ScrollMagic.Scene({triggerElement: "#trigger4", duration:700})
+		// .setPin("#three .fixed-part", {pushFollowers:false})				
+		// .addTo(controller);
 		
 			new ScrollMagic.Scene({triggerElement: "#three .fixed-part",offset:5, duration:700, tweenChanges: true})
 					.setTween(tween8)							
@@ -230,6 +230,114 @@ var controller = new ScrollMagic.Controller({
 						.setTween(tween10)
 					//	.addIndicators() 			
 						.addTo(controller);
+
+
+	var notebook	= new TimelineMax()
+		.add(TweenMax.to('#notebook1', 0.2, {strokeDashoffset: 0, ease:Linear.easeNone})) 
+		.add(TweenMax.to('#notebook2', 0.2, {strokeDashoffset: 0, ease:Linear.easeNone})) 
+		.add(TweenMax.to('#notebook3', 0.2, {strokeDashoffset: 0, ease:Linear.easeNone})) 
+
+
+	new ScrollMagic.Scene({triggerElement: "section#four", duration:600})
+							.setPin("#four", {pushFollowers:true})		
+							.setTween(notebook)
+							.addTo(controller);
+
+	new ScrollMagic.Scene({triggerElement: "section#four", duration:400})						
+							.setTween(notebook)	
+							.addTo(controller);
+
+
+	var tween11 = new TimelineMax()
+			.add(TweenMax.to(".fisrt-line-fill",0.1, { width: "100%"})) 
+			.add(TweenMax.to(".notebook img",0.1, {opacity: "1"})) 
+			.add(TweenMax.to(".notebook .price",0.1, {opacity: "1"}))
+			.add(TweenMax.to(".notebook .text",0.1, {opacity: "1"}))
+
+	new ScrollMagic.Scene({triggerElement: "section#four", duration:100})
+							.setTween(tween11)				
+							.addTo(controller);
+
+
+	var tween11_1 = new TimelineMax()
+	.add(TweenMax.to(".second-line-fill1",0.2, {  width: "25%"}))
+			
+		
+
+	new ScrollMagic.Scene({triggerElement: "section#four",offset:170, duration:100})
+						.setTween(tween11_1)						
+						.addIndicators() 
+						.on("enter", function () {							
+							$(".notebook .price .first").removeClass( "hidden");
+							$(".notebook .text .first").removeClass( "hidden");
+						})
+						.on("leave", function () {
+							$(".notebook .price .first").addClass( "hidden");
+							$(".notebook .text .first").addClass( "hidden");
+						})			
+						.addTo(controller);
+
+
+
+	var tween11_2 = new TimelineMax()
+	.add(TweenMax.to(".circle1",0.4, { background: "#EC6D61"}))
+	.add(TweenMax.to(".second-line-fill2",0.1, {  width: "25%"}))
+			
+
+
+	new ScrollMagic.Scene({triggerElement: "section#four",offset:270, duration:100})
+							.setTween(tween11_2)
+							.on("enter", function () {							
+								$(".notebook .price .second").removeClass( "hidden");
+								$(".notebook .text .second").removeClass( "hidden");
+							})
+							.on("leave", function () {
+								$(".notebook .price .second").addClass( "hidden");
+								$(".notebook .text .second").addClass( "hidden");
+							})	
+							.addIndicators() 			
+							.addTo(controller);
+
+	var tween11_3 = new TimelineMax()
+		.add(TweenMax.to(".circle2",0.4, { background: "#EC6D61"}))
+		.add(TweenMax.to(".second-line-fill3",0.1, {  width: "25%"}))	
+				
+
+
+	new ScrollMagic.Scene({triggerElement: "section#four",offset:370, duration:200})
+							.setTween(tween11_3)
+							.on("enter", function () {
+								$(".notebook .price .third").removeClass( "hidden");
+								$(".notebook .text .third").removeClass( "hidden");
+							})
+							.on("leave", function () {
+								$(".notebook .price .third").addClass( "hidden");
+								$(".notebook .text .third").addClass( "hidden");
+							})		
+							.addIndicators() 			
+							.addTo(controller);
+
+	
+
+	var tween11_4 = new TimelineMax()
+	.add(TweenMax.to(".circle3",0.4, { background: "#EC6D61"}))
+	.add(TweenMax.to(".second-line-fill4",0.1, {  width: "25%"}))	
+
+
+
+	new ScrollMagic.Scene({triggerElement: "section#four",offset:570, duration:200})
+							.setTween(tween11_4)
+							.on("enter", function () {
+								$(".notebook .price .fourth").removeClass( "hidden");
+								$(".notebook .text .fourth").removeClass( "hidden");
+							})
+							.on("leave", function () {
+								$(".notebook .price .fourth").addClass( "hidden");
+								$(".notebook .text .fourth").addClass( "hidden");
+							})						
+							.addIndicators() 			
+							.addTo(controller);
+
 		}
 
 
@@ -256,6 +364,15 @@ var controller = new ScrollMagic.Controller({
 				duration: "200%"
 			})
 			.setPin("#two", {pushFollowers:false})
+			// .setTween(wipeAnimation)
+			.addTo(controller);
+
+		new ScrollMagic.Scene({
+				triggerElement: "#four",
+				triggerHook: "onLeave",
+				duration: "200%"
+			})
+			.setPin("#four", {pushFollowers:false})
 			// .setTween(wipeAnimation)
 			.addTo(controller);
 
