@@ -285,9 +285,11 @@ text-align: right;
 .third-wrap{
   width: 100%;
   font-size: 0;
+  position: relative;
+}
+.spec-box{  
   display: flex;
   justify-content: space-between;
-  position: relative;
 }
 
 .work-block{
@@ -301,7 +303,7 @@ font-family: 'SF-medium';
  background-color: #fff;
 }
 
-.third-wrap .program,.third-wrap .html,.third-wrap .content,.third-wrap .design{
+.spec-box .program,.spec-box .html,.spec-box .content,.spec-box .design{
   display: inline-block;
   position: relative;
   width: 20%;
