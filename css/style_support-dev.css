@@ -30,6 +30,9 @@ section {
   background-color: #EFF3F7;
   position: relative;
 }
+section#three{
+  height: auto;
+}
 section svg {
     display: block;
     width: 100%;
@@ -41,6 +44,7 @@ section svg {
 }
 .container{
   height: 100%;
+  position: relative;
 }
 section#two {
   background-color: #627181;
@@ -52,11 +56,12 @@ section#three svg{
 
 #one .wrap{
   position: absolute;
-      top: 13%;
+      top: 23%;
+      left: 10%;
 }
 .price{
   font-family: 'SF-bold';
-  font-size: 225px;
+  font-size: 18vh;
   color: #EC6D61;
   position: relative;
   padding-right: 145px;
@@ -77,10 +82,10 @@ section#three svg{
   content: '';
     display: block;
     background: url(../img/arrow.png) no-repeat;
-    width: 150px;
-    bottom: 80px;
-    height: 110px;
-    right: -20px;
+width: 14vh;
+    bottom: 30%;
+    height:8vh;
+    right: 0;
     background-size: contain;
     position: absolute;
 }
@@ -96,32 +101,35 @@ color: #333333;
 
 .work-types{
   font-family: 'SF-medium';
-  font-size: 46px;
+  font-size: 5vh;
   text-align: left;
 }
 
-#two .one-hour,.any-spec{
-font-size: 80px;
-  font-family: 'SF-bold';
-  text-transform: uppercase;
-  line-height: 72px;
+#two .one-hour, .any-spec {
+    font-size: 6.5vh;
+    font-family: 'SF-bold';
+    text-transform: uppercase;
+    line-height: 6vh;
 }
+
+
 #two .one-hour{
-  max-width: 420px;
+max-width: 40vh;
   position: absolute;
-  top:9%;
+  top:18vh;
   left: 58%;
 }
 
 .any-spec{
     position: absolute;
-    bottom: 41%;
+    bottom: 30vh;
     left: 8%;
 }
     
 
 .spec1,.spec2,.spec3,.spec4{
-  font-size: 46px;
+font-size: 3vh;
+margin-bottom: 1vh;
   font-family: 'SF-medium';
   color:#333;
 }
@@ -136,23 +144,20 @@ font-size: 80px;
 }
 .spec1{
 text-align: left;
-    margin-bottom: 30px;
-    padding-left: 5%;
+    padding-left: 23vh;
 }
 .spec2{ 
 text-align: right;
-margin-bottom: -15px;
-padding-right: 10%;
+padding-right: 28vh;
 }
 .spec3{
 text-align: left;
-margin-bottom: 25px;
+    padding-left: 22vh;
  
 }
 .spec4{
-text-align: right;
-      margin-bottom: 20px;
-          margin-right: -20px;    
+text-align: right;  
+    padding-right: 16vh;
 }
 
 
@@ -172,12 +177,27 @@ text-align: right;
     text-transform: uppercase;
     position: absolute;
     color: #000;
-    left: 45.7%;
-    top: 32%;
+    left: 47%;
+    top: 6.5%;
     width: 95px;
     line-height: 28px;
 }
 
+#three .first-svg{
+  height: auto;
+  width: 90%;
+  margin:0 auto;
+}
+#three .second-svg{
+  position: absolute;
+  height: 100%;
+   width: 90%;
+ left:5%;
+}
+.second-svg-wrap{
+  height: 100%;
+  position: relative;
+}
 #circle{
   width:250px;
     position: absolute;
@@ -334,7 +354,9 @@ font-family: 'SF-medium';
   font-size: 40px;
    font-family: 'SF-bold';
 }
-
+.descr-sm{
+display: none;
+}
 .spec-1c, .system{
   display: inline-block;
 }
@@ -375,3 +397,4 @@ font-family: 'SF-medium';
 .sertificate img{
   width:100%;
 }
+
